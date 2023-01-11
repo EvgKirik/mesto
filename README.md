@@ -10,4 +10,4 @@
 * FLEX
 * JavaScript
 
-* [ссылка на GitHub Pages](https://evgkirik.github.io/russian-travel/)
+* [ссылка на GitHub Pages](https://evgkirik.github.io/mesto/)
