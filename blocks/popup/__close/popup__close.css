@@ -14,11 +14,15 @@
   background-repeat: no-repeat no-repeat;
 }
 
+.popup__close:hover {
+  opacity: 0.6;
+}
+
 @media (max-width: 768px) {
   .popup__close {
     width: 20px;
     height: 20px;
     right: 0;
-    top: -26px;
+    top: -36px;
   }
 }
