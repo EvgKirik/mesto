@@ -1,15 +1,12 @@
 .profile__button {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-right: auto;
-  max-width: calc(100% - 300px);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 0;
+  transition: 0.3 ease-in-out;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .profile__button {
-    max-width: 100%;
-    justify-content: center;
-    margin-right: 0;
-  }
+.profile__button:hover {
+  opacity: 0.6;
 }
