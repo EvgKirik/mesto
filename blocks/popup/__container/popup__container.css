@@ -1,7 +1,9 @@
 .popup__container {
   border-radius: 10px;
   position: relative;
-  max-width: 358px;
+  max-width: 430px;
+  width: 100%;
+  box-sizing: border-box;
   background: #fff;
   padding: 34px 36px 37px;
 }
@@ -9,6 +11,6 @@
 @media (max-width: 768px) {
   .popup__container {
     padding: 25px 22px 25px 22px;
-    max-width: 74vw;
+    max-width: 88vw;
   }
 }
