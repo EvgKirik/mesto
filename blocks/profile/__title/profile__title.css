@@ -8,6 +8,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 85%;
+  min-height: 48px;
 }
 
 @media (max-width: 768px) {
@@ -15,5 +16,6 @@
     font-size: 27px;
     line-height: 33px;
     text-align: center;
+    min-height: 33px;
   }
 }
