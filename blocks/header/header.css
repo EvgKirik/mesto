@@ -3,10 +3,10 @@
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
   min-height: 74px;
   width: calc(100% - 38px);
-  padding: 0 19px;
+  padding: 0 38px 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 934px) {
   .header {
     min-height: 56px;
     margin: 28px 0 42px;
