@@ -3,12 +3,12 @@
   align-items: center;
   flex-wrap: wrap;
   margin-right: auto;
-  max-width: calc(100% - 300px);
+  max-width: 340px;
 }
 
 @media (max-width: 768px) {
   .profile__info {
-    max-width: 100%;
+    max-width: 255px;
     justify-content: center;
     margin-right: 0;
   }
