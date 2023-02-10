@@ -1,0 +1,7 @@
+.popup__container_lightbox {
+  padding: 0;
+  background-color: transparent;
+  width: auto;
+  max-width: 75vw;
+  height: 75vh;
+}

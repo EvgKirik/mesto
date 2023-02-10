@@ -12,6 +12,7 @@
   padding: 0;
   background-size: contain;
   background-repeat: no-repeat no-repeat;
+  transition: 0.3s ease-in-out;
 }
 
 .popup__close:hover {
