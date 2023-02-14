@@ -32,7 +32,7 @@ function createNewCard(name, link) {
   });
 
   card.querySelector(".elements__image").addEventListener("click", () => {
-    openPopup(popupLightbox);
+    openPopupElement(popupLightbox);
     popupImage.src = link;
     popupImage.alt = name;
     popupText.textContent = name;
@@ -44,53 +44,56 @@ function createNewCard(name, link) {
 function createCards() {
   initialCards.forEach((card) => {
     createNewCard(card.name, card.link);
-  });
+  });openPopupElement
 }
 
 const cardList = createCards(initialCards);
 
-function openPopup(e) {
-  e.classList.add("popup_opened");
+function openPopupElement(element) {
+  element.classList.add("popup_opened");
 }
 
-function closePopup(e) {
-  e.classList.remove("popup_opened");
-  if (e.querySelector("form")) {
-    e.querySelector("form").reset();
-  }
+function closePopupElement(element) {
+  element.classList.remove("popup_opened");
+}
+
+function openAddCardPopup() {
+  openPopupElement(popupAddCard);
+  formAddCard.reset();
 }
 
 function handleFormProfileSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileSubtitle.textContent = jobInput.value;
-  closePopup(popupProfile);
+  closePopupElement(popupProfile);
 }
 
 function handleFormAddCardSubmit(evt) {
   evt.preventDefault();
   createNewCard(cardNameInput.value, cardImageInput.value);
-  closePopup(popupAddCard);
+  closePopupElement(popupAddCard);
 }
 
 profileButtonEdit.addEventListener("click", () => {
-  openPopup(popupProfile);
+  openPopupElement(popupProfile);
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileSubtitle.textContent;
 });
 popupProfileClose.addEventListener("click", () => {
-  closePopup(popupProfile);
+  closePopupElement(popupProfile);
 });
 
-addCardButton.addEventListener("click", () => {
-  openPopup(popupAddCard);
+addCardButton.addEventListener("click", openAddCardPopup);
+popupAddCardClose.addEventListener("click", () => {
+  closePopupElement(popupAddCard);
 });
 popupAddCardClose.addEventListener("click", () => {
-  closePopup(popupAddCard);
+  closePopupElement(popupAddCard);
 });
 
 popupLightboxClose.addEventListener("click", () => {
-  closePopup(popupLightbox);
+  closePopupElement(popupLightbox);
 });
 
 formProfile.addEventListener("submit", handleFormProfileSubmit);
